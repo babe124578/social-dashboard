@@ -6,6 +6,7 @@ import Main from "./Main";
 import "./index.css";
 import { Router } from 'react-router-dom';
 
-ReactDOM.render(<Router basename={process.env.PUBLIC_URL}><Main /></Router>,
+ReactDOM.render(
+    <Main />,
     document.getElementById("root")
 );
