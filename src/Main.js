@@ -18,25 +18,25 @@ class Main extends Component {
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav className="mr-auto">
-                                <Nav.Link href="/">Daily messages</Nav.Link>
-                                <Nav.Link href="/#top-10-accounts">Top 10 accounts by messages</Nav.Link>
-                                <Nav.Link href="/#top-10-messages">Top 10 messages by engagements</Nav.Link>
-                                <Nav.Link href="/#word-clouds">Word Clouds</Nav.Link>
-                                <Nav.Link href="/#hashtag-clouds">Hashtag Clouds</Nav.Link>
+                                <Nav.Link href="/social-dashboard/#/">Daily messages</Nav.Link>
+                                <Nav.Link href="/social-dashboard/#/top-10-accounts">Top 10 accounts by messages</Nav.Link>
+                                <Nav.Link href="/social-dashboard/#/top-10-messages">Top 10 messages by engagements</Nav.Link>
+                                <Nav.Link href="/social-dashboard/#/word-clouds">Word Clouds</Nav.Link>
+                                <Nav.Link href="/social-dashboard/#/hashtag-clouds">Hashtag Clouds</Nav.Link>
                             </Nav>
                             <Form inline>
                                 <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-                                <Button variant="outline-success">Search0.2</Button>
+                                <Button variant="outline-success">Search0.1</Button>
                             </Form>
                         </Navbar.Collapse>
                     </Navbar>
                     <div>
                         <div className="content">
-                            <Route exact path="/social-dashboard/#/" component={daily} />
-                            <Route path="/social-dashboard/#/top-10-accounts" component={top10accounts} />
-                            <Route path="/social-dashboard/#/top-10-messages" component={top10messages} />
-                            <Route path="/social-dashboard/#/word-clouds" component={wordclouds} />
-                            <Route path="/social-dashboard/#/hashtag-clouds" component={hashtagclouds} />
+                            <Route exact path="/" component={daily} />
+                            <Route path="/top-10-accounts" component={top10accounts} />
+                            <Route path="/top-10-messages" component={top10messages} />
+                            <Route path="/word-clouds" component={wordclouds} />
+                            <Route path="/hashtag-clouds" component={hashtagclouds} />
                         </div>
                     </div>
                 </div>
