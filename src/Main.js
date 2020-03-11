@@ -33,10 +33,10 @@ class Main extends Component {
                     <div>
                         <div className="content">
                             <Route exact path="/" component={daily} />
-                            <Route path="/top-10-accounts" component={top10accounts} />
-                            <Route path="/top-10-messages" component={top10messages} />
-                            <Route path="/word-clouds" component={wordclouds} />
-                            <Route path="/hashtag-clouds" component={hashtagclouds} />
+                            <Route path="/" component={top10accounts} />
+                            <Route path="/" component={top10messages} />
+                            <Route path="/" component={wordclouds} />
+                            <Route path="/" component={hashtagclouds} />
                         </div>
                     </div>
                 </div>
