@@ -32,11 +32,11 @@ class Main extends Component {
                     </Navbar>
                     <div>
                         <div className="content">
-                            <Route exact path="social-dashboard/#/" component={daily} />
-                            <Route path="social-dashboard/#/top-10-accounts" component={top10accounts} />
-                            <Route path="social-dashboard/#/top-10-messages" component={top10messages} />
-                            <Route path="social-dashboard/#/word-clouds" component={wordclouds} />
-                            <Route path="social-dashboard/#/hashtag-clouds" component={hashtagclouds} />
+                            <Route exact path="/social-dashboard/#/" component={daily} />
+                            <Route path="/social-dashboard/#/top-10-accounts" component={top10accounts} />
+                            <Route path="/social-dashboard/#/top-10-messages" component={top10messages} />
+                            <Route path="/social-dashboard/#/word-clouds" component={wordclouds} />
+                            <Route path="/social-dashboard/#/hashtag-clouds" component={hashtagclouds} />
                         </div>
                     </div>
                 </div>
