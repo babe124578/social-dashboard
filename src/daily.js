@@ -21,6 +21,7 @@ class daily extends Component {
                 )
             })
             this.setState({text:text});
+            console.log("state", this.state.text)
         })
     }
 
