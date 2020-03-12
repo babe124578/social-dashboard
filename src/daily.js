@@ -16,7 +16,7 @@ class daily extends Component {
     render() {
         return (
             <div>
-                <h5>todos.Daily</h5>
+                <h5>todos</h5>
             </div>
         )
     }
