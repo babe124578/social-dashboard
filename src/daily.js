@@ -2,22 +2,22 @@ import React, { Component } from "react";
 
 class daily extends Component {
     state = {
-        todos: []
+        received: []
     }
-    componentDidMount(){
+    componentDidMount() {
         fetch('http://127.0.0.1:5000/Daily')
-        .then(res => res.json())
-        .then((data) => {
-            this.setState({todos:data})
-            console.log(this.state.todos)
-        })
-        .catch(console.log)
+            .then(res => res.json())
+            .then((data) => {
+                this.setState({ received: data })
+                console.log("log received:", this.state.received)
+            })
+            .catch(console.log)
     }
+
     render() {
         return (
-            <div>
-                <h5>todos</h5>
-            </div>
+            <img src={"data:image/jpeg;base64," + this.state.received.encoded} alt="dailycount" />
+
         )
     }
 }
