@@ -25,7 +25,7 @@ class daily extends Component {
         datas: {}
     }
     componentDidMount() {
-        fetch('http://socialdashboarddaily-env-1.eba-bb66rk5e.ap-northeast-1.elasticbeanstalk.com/Daily')
+        fetch('https://dashdaily2.ap-northeast-1.elasticbeanstalk.com/Daily')
             .then(res => res.json())
             .then((data) => {
                 this.setState({
