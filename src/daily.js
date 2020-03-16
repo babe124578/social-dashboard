@@ -25,7 +25,7 @@ class daily extends Component {
         datas: {}
     }
     componentDidMount() {
-        fetch('http://127.0.0.1:5000/Daily')
+        fetch('http://socialdashboarddaily-env-1.eba-bb66rk5e.ap-northeast-1.elasticbeanstalk.com/Daily')
             .then(res => res.json())
             .then((data) => {
                 this.setState({
@@ -34,8 +34,7 @@ class daily extends Component {
                         datasets: [{
                             label: "date_count",
                             data: data.labels[1],
-                            borderColor: '#B8F8EC',
-                            backgroundColor: '#B8F8EC',
+                            hoverBackgroundColor: '#B8F8EC',
                             pointBorderColor: '#FF0000',
                             pointBackgroundColor: '#FF0000',
                             pointBorderWidth: 1,
