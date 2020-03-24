@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Container, Row, Col, Toast } from "react-bootstrap";
+import "./Main.css"
 
 
 class top10accounts extends Component {
@@ -22,9 +23,9 @@ class top10accounts extends Component {
                 <Row>
                     <Col>
                         <Toast>
-                            <Toast.Header closeButton={false}>
-                                <strong className="mr-auto">Account Name</strong>
-                                <small>Amount of message from 3 months</small>
+                            <Toast.Header closeButton={false} id="headertoast">
+                                <strong className="mr-auto" id="message">Account Name</strong>
+                                <small id="engagement">Amount of message from 3 months</small>
                             </Toast.Header>
                             {this.state.topacc.map(function (m, idx) {
                                 return (

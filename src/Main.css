@@ -1,0 +1,21 @@
+.toprow {
+    padding-top: 15px;
+}
+
+#message {
+    font-size: 1.1rem;
+    color: white;
+}
+
+#headertoast {
+    background-color: rgb(78, 78, 78);
+}
+
+#engagement {
+    font-size: 0.7rem;
+    color: white;
+}
+
+body {
+    background-color: rgb(240, 228, 240);
+}

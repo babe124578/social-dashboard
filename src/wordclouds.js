@@ -3,29 +3,21 @@ import ReactWordcloud from 'react-wordcloud';
 
 class wordcloud extends Component {
     state = {
-        wordcloudData: [{ "labels": "WordCloud", "value": 13000 }]
+        wordcloudData: [{ "text": "WordCloud", "value": 13000 }]
     }
     componentDidMount() {
         fetch('https://wordcloud.ap-northeast-1.elasticbeanstalk.com/Wordcloud')
             .then(res => res.json())
             .then((data) => {
-                this.setState({ wordcloudData: [...this.state.wordcloudData, data.labels ]})
-            })
+                this.setState({ wordcloudData: this.state.wordcloudData.concat(data.labels)})
+            })  
     }
     render() {
         return (
-            <div style={{ height: 400, width: 700 }}>
+            <div style={{ height: 300, width: 500 }}>
                 <ReactWordcloud
                     words={this.state.wordcloudData}
                     options={{
-                        colors: [
-                            '#1f77b4',
-                            '#ff7f0e',
-                            '#2ca02c',
-                            '#d62728',
-                            '#9467bd',
-                            '#8c564b',
-                        ],
                         enableTooltip: true,
                         deterministic: false,
                         fontFamily: 'impact',

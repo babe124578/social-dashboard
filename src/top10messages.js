@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Container, Row, Col, Toast } from "react-bootstrap";
-import "./top10message.css"
+import "./Main.css"
 
 class top10messages extends Component {
     state = {
@@ -22,14 +22,14 @@ class top10messages extends Component {
                 <Row>
                     <Col>
                         <Toast>
-                            <Toast.Header closeButton={false}>
-                                <strong className="mr-auto">Message</strong>
-                                <small>Engagement</small>
+                            <Toast.Header closeButton={false} id="headertoast">
+                                <strong className="mr-auto" id="message">Message</strong>
+                                <small id="engagement">Engagement</small>
                             </Toast.Header>
                             {this.state.topacc.map(function (m, idx) {
                                 return (
                                     <Toast.Header closeButton={false} key={idx}>
-                                        <strong className="mr-auto" id='text'>{m.name}</strong>
+                                        <strong className="mr-auto">{m.text}</strong>
                                         <small>{m.value}</small>
                                     </Toast.Header>
                                 )
