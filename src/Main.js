@@ -1,46 +1,27 @@
 import React, { Component } from "react";
-import { HashRouter, Route } from "react-router-dom";
-import daily from "./daily";
-import hashtagclouds from "./hashtagclouds";
+import Daily from "./daily";
+import Hashtagclouds from "./hashtagclouds";
 import "./Main.css";
-import top10accounts from "./top10accounts";
-import top10messages from "./top10messages";
-import wordclouds from "./wordclouds";
-import { Nav, Navbar, Form, FormControl, Button } from "react-bootstrap";
+import Top10accounts from "./top10accounts";
+import Top10messages from "./top10messages";
+import Wordclouds from "./wordclouds";
+import { Container, Row, Col } from "react-bootstrap";
 
 class Main extends Component {
     render() {
         return (
-            <HashRouter>
-                <div>
-                    <Navbar bg="dark" variant="dark">
-                        <Navbar.Brand>Dashboard</Navbar.Brand>
-                        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                        <Navbar.Collapse id="basic-navbar-nav">
-                            <Nav className="mr-auto">
-                                <Nav.Link href="/social-dashboard/#/">Daily messages</Nav.Link>
-                                <Nav.Link href="/social-dashboard/#/top-10-accounts">Top 10 accounts by messages</Nav.Link>
-                                <Nav.Link href="/social-dashboard/#/top-10-messages">Top 10 messages by engagements</Nav.Link>
-                                <Nav.Link href="/social-dashboard/#/word-clouds">Word Clouds</Nav.Link>
-                                <Nav.Link href="/social-dashboard/#/hashtag-clouds">Hashtag Clouds</Nav.Link>
-                            </Nav>
-                            <Form inline>
-                                <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-                                <Button variant="outline-success">Search</Button>
-                            </Form>
-                        </Navbar.Collapse>
-                    </Navbar>
-                    <div>
-                        <div className="content">
-                            <Route exact path="/" component={daily} />
-                            <Route path="/top-10-accounts" component={top10accounts} />
-                            <Route path="/top-10-messages" component={top10messages} />
-                            <Route path="/word-clouds" component={wordclouds} />
-                            <Route path="/hashtag-clouds" component={hashtagclouds} />
-                        </div>
-                    </div>
-                </div>
-            </HashRouter>
+            <Container fluid>
+                <Row>
+                    <Col><Hashtagclouds /></Col>
+                    <Col><Wordclouds /></Col>
+                </Row>
+                <hr />
+                <Row>
+                    <Col><Daily /></Col>
+                    <Col><Top10accounts /></Col>
+                    <Col><Top10messages /></Col>
+                </Row>
+            </Container>
         );
     }
 }

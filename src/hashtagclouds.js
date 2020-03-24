@@ -1,22 +1,39 @@
 import React, { Component } from "react";
+import ReactWordcloud from 'react-wordcloud';
 
 class hashtagclouds extends Component {
     state = {
-        received: []
+        hashtagData: []
     }
     componentDidMount() {
-        fetch('http://127.0.0.1:5000/Wordcloud')
+        fetch('https://hashcloud.ap-northeast-1.elasticbeanstalk.com/Hashtag')
             .then(res => res.json())
             .then((data) => {
-                this.setState({ received: data })
-                console.log("log received:", this.state.received)
+                this.setState({ hashtagData: data.labels })
             })
             .catch(console.log)
     }
     render() {
         return (
-            <div>
-                <img src={"data:image/jpeg;base64," + this.state.received.encoded} alt="hashtagcloud" />
+            <div style={{ height: 400, width: 700 }}>
+                <h2>Hashtag Cloud</h2>
+                <ReactWordcloud
+                    words={this.state.hashtagData}
+                    options={{
+                        enableTooltip: true,
+                        deterministic: false,
+                        fontFamily: 'impact',
+                        fontSizes: [5, 60],
+                        fontStyle: 'normal',
+                        fontWeight: 'normal',
+                        padding: 1,
+                        rotations: 1,
+                        rotationAngles: [0, 90],
+                        scale: 'sqrt',
+                        spiral: 'archimedean',
+                        transitionDuration: 0,
+                    }}
+                />
             </div>
         )
     }
