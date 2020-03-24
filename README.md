@@ -27,7 +27,7 @@ I host frontend on github pages using github action to auto deploy when I commit
 To run youcan either use npm install then npm start from source code root directory or access github pages site.
 
 ### Backend
-I host each backend topics as API in Amazon Elastic Beanstalk, each API for 1 EC2 instance.
+I host each backend topics as API in docker container, and host these container in Amazon Elastic Beanstalk, each container for 1 EC2 instance.
 
 *Note: The backend section cannot run because it need accesskey and secret to access Amazon S3 service.*
 
