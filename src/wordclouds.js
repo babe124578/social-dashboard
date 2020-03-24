@@ -3,15 +3,13 @@ import ReactWordcloud from 'react-wordcloud';
 
 class wordcloud extends Component {
     state = {
-        wordcloudData: []
+        wordcloudData: [{ "labels": "WordCloud", "value": 13000 }]
     }
     componentDidMount() {
         fetch('https://wordcloud.ap-northeast-1.elasticbeanstalk.com/Wordcloud')
             .then(res => res.json())
             .then((data) => {
-                this.setState({ wordcloudData: data.labels })
-                this.setState({ wordcloudData: [...this.state.wordcloudData, { "labels": "WordCloud", "value": 999999 }] })
-
+                this.setState({ wordcloudData: [...this.state.wordcloudData, data.labels ]})
             })
     }
     render() {
