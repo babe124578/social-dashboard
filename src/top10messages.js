@@ -7,7 +7,7 @@ class top10messages extends Component {
         topacc: []
     }
     componentDidMount() {
-        fetch('https://top10account.ap-northeast-1.elasticbeanstalk.com/TopAccount')
+        fetch('https://top10message.ap-northeast-1.elasticbeanstalk.com/TopMessage')
             .then(res => res.json())
             .then((data) => {
                 this.setState({
