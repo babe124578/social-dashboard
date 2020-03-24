@@ -23,6 +23,7 @@ This project show the social dashboard dataset form Wisesight (Thailand) Co., Lt
     5. Hashtag Clouds                   top-center of the site page
 
 ### Front end
+*This site need about 10-15 seconds to fetch all resource due to limitation of low tier EC2 instances.*
 I host frontend on github pages using github action to auto deploy when I commit and put source code in github.
 To run youcan either use npm install then npm start from source code root directory or access github pages site.
 
@@ -31,3 +32,5 @@ I host each backend topics as API in docker container, and host these container 
 
 *Note: The backend section cannot run because it need accesskey and secret to access Amazon S3 service.*
 
+### Test
+Test section will be produced within March 27 2020.(If nothing goes wrong)
