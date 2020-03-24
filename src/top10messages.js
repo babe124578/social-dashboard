@@ -1,17 +1,17 @@
 import React, { Component } from "react";
 import { Container, Row, Col, Toast } from "react-bootstrap";
-
+import "./top10message.css"
 
 class top10messages extends Component {
     state = {
-        topmes: []
+        topacc: []
     }
     componentDidMount() {
-        fetch('https://top10message.ap-northeast-1.elasticbeanstalk.com/TopMessage')
+        fetch('https://top10account.ap-northeast-1.elasticbeanstalk.com/TopAccount')
             .then(res => res.json())
             .then((data) => {
                 this.setState({
-                    topmes: data.labels
+                    topacc: data.labels
                 })
             })
     }
@@ -26,10 +26,10 @@ class top10messages extends Component {
                                 <strong className="mr-auto">Message</strong>
                                 <small>Engagement</small>
                             </Toast.Header>
-                            {this.state.topmes.map(function (m, idx) {
+                            {this.state.topacc.map(function (m, idx) {
                                 return (
                                     <Toast.Header closeButton={false} key={idx}>
-                                        <strong className="mr-auto">{m.name}</strong>
+                                        <strong className="mr-auto" id='text'>{m.name}</strong>
                                         <small>{m.value}</small>
                                     </Toast.Header>
                                 )
