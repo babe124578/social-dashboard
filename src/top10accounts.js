@@ -4,8 +4,7 @@ import { Container, Row, Col, Toast } from "react-bootstrap";
 
 class top10accounts extends Component {
     state = {
-        topacc: [],
-        data: [{ name: 'bob', val: 12 }, { name: 'chris', val: 13 }]
+        topacc: []
     }
     componentDidMount() {
         fetch('https://top10account.ap-northeast-1.elasticbeanstalk.com/TopAccount')
