@@ -10,12 +10,9 @@ class wordcloud extends Component {
             .then(res => res.json())
             .then((data) => {
                 this.setState({ wordcloudData: data.labels })
+                this.setState({ wordcloudData: [...this.state.wordcloudData, { "labels": "WordCloud", "value": 999999 }] })
+
             })
-            .then(
-                this.setState(
-                    { wordcloudData: [...this.state.wordcloudData, { "labels": "WordCloud", "value": 999999 }] }
-                )
-            )
     }
     render() {
         return (

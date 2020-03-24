@@ -10,12 +10,8 @@ class hashtagclouds extends Component {
             .then(res => res.json())
             .then((data) => {
                 this.setState({ hashtagData: data.labels })
-            })
-            .then(
-                this.setState(
-                    { hashtagData: [...this.state.hashtagData, { "labels": "HashtagCloud", "value": 999999 }] }
-                )
-            )
+                this.setState({ hashtagData: [...this.state.hashtagData, { "labels": "HashtagCloud", "value": 999999 }] })
+            })            
     }
     render() {
         return (
