@@ -8,7 +8,7 @@ class top10accounts extends Component {
         data: [{ name: 'bob', val: 12 }, { name: 'chris', val: 13 }]
     }
     componentDidMount() {
-        fetch('http://top10account.ap-northeast-1.elasticbeanstalk.com/TopAccount')
+        fetch('https://top10account.ap-northeast-1.elasticbeanstalk.com/TopAccount')
             .then(res => res.json())
             .then((data) => {
                 this.setState({
