@@ -11,12 +11,15 @@ class hashtagclouds extends Component {
             .then((data) => {
                 this.setState({ hashtagData: data.labels })
             })
-            .catch(console.log)
+            .then(
+                this.setState(
+                    { groceries: [...this.state.hashtagData, { "labels": "HashtagCloud", "value": 999999 }] }
+                )
+            )
     }
     render() {
         return (
             <div style={{ height: 400, width: 700 }}>
-                <h2>Hashtag Cloud</h2>
                 <ReactWordcloud
                     words={this.state.hashtagData}
                     options={{

@@ -3,22 +3,25 @@ import ReactWordcloud from 'react-wordcloud';
 
 class wordcloud extends Component {
     state = {
-        hashtagData: []
+        wordcloudData: []
     }
     componentDidMount() {
-        fetch('https://hashcloud.ap-northeast-1.elasticbeanstalk.com/Hashtag')
+        fetch('https://wordcloud.ap-northeast-1.elasticbeanstalk.com/Wordcloud')
             .then(res => res.json())
             .then((data) => {
-                this.setState({ hashtagData: data.labels })
+                this.setState({ wordcloudData: data.labels })
             })
-            .catch(console.log)
+            .then(
+                this.setState(
+                    { groceries: [...this.state.wordcloudData, { "labels": "WordCloud", "value": 999999 }] }
+                )
+            )
     }
     render() {
         return (
             <div style={{ height: 400, width: 700 }}>
-                <h2>Hashtag Cloud</h2>
                 <ReactWordcloud
-                    words={this.state.hashtagData}
+                    words={this.state.wordcloudData}
                     options={{
                         colors: [
                             '#1f77b4',
