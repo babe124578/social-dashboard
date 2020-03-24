@@ -13,7 +13,7 @@ class hashtagclouds extends Component {
             })
             .then(
                 this.setState(
-                    { groceries: [...this.state.hashtagData, { "labels": "HashtagCloud", "value": 999999 }] }
+                    { hashtagData: [...this.state.hashtagData, { "labels": "HashtagCloud", "value": 999999 }] }
                 )
             )
     }

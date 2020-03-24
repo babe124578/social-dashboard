@@ -13,7 +13,7 @@ class wordcloud extends Component {
             })
             .then(
                 this.setState(
-                    { groceries: [...this.state.wordcloudData, { "labels": "WordCloud", "value": 999999 }] }
+                    { wordcloudData: [...this.state.wordcloudData, { "labels": "WordCloud", "value": 999999 }] }
                 )
             )
     }
