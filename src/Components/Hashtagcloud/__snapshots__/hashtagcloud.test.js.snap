@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`shallow snapshot 1`] = `
+<div
+  style={
+    Object {
+      "height": 300,
+      "width": 500,
+    }
+  }
+>
+  <ReactWordCloud
+    callbacks={
+      Object {
+        "getWordTooltip": [Function],
+      }
+    }
+    maxWords={100}
+    minSize={
+      Array [
+        300,
+        300,
+      ]
+    }
+    options={
+      Object {
+        "deterministic": false,
+        "enableTooltip": true,
+        "fontFamily": "impact",
+        "fontSizes": Array [
+          5,
+          60,
+        ],
+        "fontStyle": "normal",
+        "fontWeight": "normal",
+        "padding": 1,
+        "rotationAngles": Array [
+          0,
+          90,
+        ],
+        "rotations": 1,
+        "scale": "sqrt",
+        "spiral": "archimedean",
+        "transitionDuration": 0,
+      }
+    }
+    words={
+      Array [
+        Object {
+          "text": "#HashtagCloud",
+          "value": 5000,
+        },
+      ]
+    }
+  />
+</div>
+`;

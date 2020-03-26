@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`shallow snapshot 1`] = `
+<div>
+  <Line
+    data={
+      Object {
+        "labels": null,
+      }
+    }
+    options={
+      Object {
+        "hover": Object {
+          "mode": "dataset",
+        },
+        "responsive": true,
+        "scales": Object {
+          "xAxes": Array [
+            Object {
+              "display": true,
+              "scaleLabel": Object {
+                "labelString": "Month",
+                "show": true,
+              },
+            },
+          ],
+          "yAxes": Array [
+            Object {
+              "display": true,
+              "scaleLabel": Object {
+                "labelString": "Value",
+                "show": true,
+              },
+              "ticks": Object {
+                "suggestedMax": 250,
+                "suggestedMin": -10,
+              },
+            },
+          ],
+        },
+        "title": Object {
+          "display": true,
+          "text": "Daily post on social media",
+        },
+        "tooltips": Object {
+          "mode": "label",
+        },
+      }
+    }
+  />
+</div>
+`;

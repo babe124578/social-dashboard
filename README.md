@@ -33,4 +33,7 @@ I host each backend topics as API in docker container, and host these container 
 *Note: The backend section cannot run because it need accesskey and secret to access Amazon S3 service.*
 
 ### Test
-Test section will be produced within March 27 2020.(If nothing goes wrong)
+You can run **npm test** to test the react app
+I write thr test to test 2 topic.
+1. Shallow testing
+2. Snapshot testing

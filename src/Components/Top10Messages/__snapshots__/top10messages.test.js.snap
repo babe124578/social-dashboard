@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`shallow snapshot 1`] = `
+<ForwardRef
+  fluid={true}
+>
+  <ForwardRef
+    noGutters={false}
+  >
+    <ForwardRef>
+      <ForwardRef
+        animation={true}
+        autohide={false}
+        delay={3000}
+        show={true}
+        transition={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "defaultProps": Object {
+              "appear": false,
+              "in": false,
+              "mountOnEnter": false,
+              "timeout": 300,
+              "unmountOnExit": false,
+            },
+            "displayName": "Fade",
+            "render": [Function],
+          }
+        }
+      >
+        <ForwardRef
+          closeButton={false}
+          closeLabel="Close"
+          id="headertoast"
+        >
+          <strong
+            className="mr-auto"
+            id="message"
+          >
+            Message
+          </strong>
+          <small
+            id="engagement"
+          >
+            Engagement
+          </small>
+        </ForwardRef>
+      </ForwardRef>
+    </ForwardRef>
+  </ForwardRef>
+</ForwardRef>
+`;

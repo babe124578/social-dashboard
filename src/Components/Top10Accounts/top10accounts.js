@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Container, Row, Col, Toast } from "react-bootstrap";
-import "./Main.css"
+import "../../CSS/Main.css"
 
 
 class top10accounts extends Component {

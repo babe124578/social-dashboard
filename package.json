@@ -15,6 +15,7 @@
     "react-dom": "^16.13.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.0",
+    "react-test-renderer": "^16.13.1",
     "react-wordcloud": "^1.2.2",
     "reactstrap": "^8.4.1",
     "styled-components": "^5.0.1"
@@ -44,6 +45,11 @@
     ]
   },
   "devDependencies": {
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
     "gh-pages": "^2.2.0"
-  }
+  },
+  "setupFiles": [
+    "./src/setupTests.js"
+  ]
 }

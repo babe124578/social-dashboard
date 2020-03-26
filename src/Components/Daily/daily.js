@@ -3,8 +3,6 @@ import { Line } from "react-chartjs-2";
 
 class daily extends Component {
     state = {
-        thislabels: [],
-        thiscounts: [],
         options: {
             responsive: true,
             title: {
@@ -22,7 +20,9 @@ class daily extends Component {
                 yAxes: [{ display: true, scaleLabel: { show: true, labelString: 'Value' }, ticks: { suggestedMin: -10, suggestedMax: 250 } }]
             }
         },
-        datas: {}
+        datas: {
+            labels: null
+        }
     }
     componentDidMount() {
         fetch('https://dashdaily2.ap-northeast-1.elasticbeanstalk.com/Daily')
