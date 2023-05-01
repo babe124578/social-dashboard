@@ -1,4 +1,4 @@
-﻿boto3==1.11.16
-Flask==1.1.1
+boto3==1.11.16
+Flask==2.3.2
 Flask-Cors==3.0.9
 pandas==1.0.1
